@@ -1,0 +1,59 @@
+.title{
+  font-size:35px;
+  margin-left: 100px;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.form{
+  margin-left:100px;
+  
+}
+
+.form-div{
+  display: grid;
+  grid-template-columns: 140px 200px;
+  grid-template-areas: "theText theInput";
+  margin-bottom: 15px; 
+}
+
+.form-div.text{
+  grid-area:theText;
+}
+
+.form-div-input{
+  grid-area: theInput;
+}
+
+
+.cancel-button{
+  margin-left:50px;
+  color:red;
+}
+
+.column{
+  flex: 50%;
+  padding:15px;
+}
+
+.row{
+  display: flex;
+}
+
+.QRcentered{
+  position:relative;
+  margin-top: 20%;
+}
+
+.helloQR{
+  font-size: 25px;
+  margin-bottom:30px;
+  
+}
+
+.sorry{
+  font-size:35px;
+  margin-left: 50px;
+  margin-top:20px;
+  margin-bottom:40px;
+}

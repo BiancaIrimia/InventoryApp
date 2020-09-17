@@ -1,0 +1,36 @@
+<div class="toolbar">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()" >
+      <img src="https://img.icons8.com/ios/32/000000/squared-menu.png"/>
+    </button>
+    
+    <span class="app-name">Inventory App</span>
+    <span class="spacer"></span>
+   
+  
+  </mat-toolbar>
+  </div>
+  
+  <mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav #sidenav mode="over" [(opened)]="opened" (opened)="events.push()"
+                 (closed)="events.push()" class="side-nav">
+      <ul>
+        <li> <a routerLink= "/inventory" (click)="sidenav.close()"><img src="https://img.icons8.com/android/24/000000/in-inventory.png"/> Inventory</a></li>
+        <li><a routerLink= "/scan" (click)="sidenav.close()"><img src="https://img.icons8.com/material-sharp/24/000000/qr-code.png"/> Scan</a></li>
+        <li> <a routerLink= "/add-item" (click)="sidenav.close()">
+          <img src="https://img.icons8.com/metro/24/000000/create-new.png"/>
+          Add Item</a></li>
+        <li> <a routerLink= "/contact" (click)="sidenav.close()"><img src="https://img.icons8.com/material-outlined/24/000000/add-contact-to-company.png"/> Contact</a></li> 
+     </ul>
+     <router-outlet></router-outlet>
+      
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      
+  
+   <router-outlet></router-outlet>
+      
+    
+    </mat-sidenav-content>
+  </mat-sidenav-container>
